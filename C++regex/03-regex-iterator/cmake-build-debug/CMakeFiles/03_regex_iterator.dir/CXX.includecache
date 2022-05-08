@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/zzj/Documents/workspace/regex/cpp-regex/Cpp-regex-course/C++regex/03-regex-iterator/main.cpp
+iostream
+-
+regex
+-
+vector
+-
+algorithm
+-
+
