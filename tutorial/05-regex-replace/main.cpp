@@ -27,7 +27,7 @@ int main() {
     regex_replace(back_inserter(res2), data1.cbegin(), data1.cend(), reg, R"(<$1 value=$2/>)",
                   regex_constants::format_no_copy | regex_constants::format_first_only);
     cout << "res2= " << res2 << endl;
-sre
+
 
     return 0;
 }

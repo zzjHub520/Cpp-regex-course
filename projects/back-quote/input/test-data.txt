@@ -1,0 +1,31 @@
+
+```cmake
+查询主机系统特定信息
+  cmake_host_system_information(RESULT <variable> QUERY <key> ...)
+
+查询 Windows 注册表
+  cmake_host_system_information(RESULT <variable> QUERY WINDOWS_REGISTRY <key> ...)
+```
+
+### 查询主机系统特定信息
+
+```cmake
+cmake_host_system_information(RESULT <variable> QUERY <key> ...)
+```
+
+查询运行cmake的宿主系统的系统信息。`<key>`可以提供一个或多个来选择要查询的信息。查询值列表存储在`<variable>`.
+
+
+### 查询 Windows 注册表
+
+*版本 3.24 中的新功能。*
+
+```cmake
+cmake_host_system_information(RESULT <variable>
+                              QUERY WINDOWS_REGISTRY <key> [VALUE_NAMES|SUBKEYS|VALUE <name>]
+                              [VIEW (64|32|64_32|32_64|HOST|TARGET|BOTH)]
+                              [SEPARATOR <separator>]
+                              [ERROR_VARIABLE <result>])
+```
+
+对本地计算机注册表子项执行查询操作。返回位于注册表中指定子键下的子键或值名称列表或指定值名称的数据。查询实体的结果存储在`<variable>`.
